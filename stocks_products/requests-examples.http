@@ -7,8 +7,8 @@ POST {{baseUrl}}/products/
 Content-Type: application/json
 
 {
-  "title": "Кабачки",
-  "description": "Лучшие кабачки на рынке"
+  "title": "Редиска",
+  "description": "Нехороший человек"
 }
 
 ###
@@ -71,12 +71,12 @@ Content-Type: application/json
   "positions": [
     {
       "product": 4,
-      "quantity": 100,
+      "quantity": 1000,
       "price": 130.80
     },
     {
       "product": 2,
-      "quantity": 23,
+      "quantity": 230,
       "price": 145
     }
   ]
@@ -112,3 +112,11 @@ DELETE {{baseUrl}}/stocks/6/
 Content-Type: application/json
 
 ###
+# поиск продуктов
+GET {{baseUrl}}/products/?search=помид
+Content-Type: application/json
+
+###
+# поиск складов, где есть определенный продукт
+GET {{baseUrl}}/stocks/?search=помид
+Content-Type: application/json
